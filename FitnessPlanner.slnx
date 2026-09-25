@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="FitnessPlanner.API/FitnessPlanner.API.csproj" />
+  <Project Path="FitnessPlanner.BLL/FitnessPlanner.BLL.csproj" />
+  <Project Path="FitnessPlannerDAL/FitnessPlanner.DAL.csproj" />
+  <Project Path="Models/FitnessPlanner.Models.csproj" />
+</Solution>
