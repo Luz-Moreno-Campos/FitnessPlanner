@@ -98,8 +98,9 @@ namespace FitnessPlanner.DAL.Context
                 .HasMaxLength(500);
 
             modelBuilder.Entity<Exercise>()
-                .Property(e => e.EquipmentRequired)
-                .IsRequired();
+                .Property(e => e.Equipment)
+                .IsRequired()
+                .HasMaxLength(100);
 
             modelBuilder.Entity<Exercise>()
                 .HasIndex(e => e.Name)

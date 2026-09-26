@@ -14,7 +14,7 @@ namespace FitnessPlanner.Models
 
         public string Description { get; set; } = string.Empty;
 
-        public bool EquipmentRequired { get; set; }
+        public string Equipment { get; set; } = string.Empty;
 
         public ICollection<WorkoutExercise> WorkoutExercises { get; set; }
             = new List<WorkoutExercise>();
