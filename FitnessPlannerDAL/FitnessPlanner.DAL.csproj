@@ -19,4 +19,9 @@
     <ProjectReference Include="..\Models\FitnessPlanner.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="SeedData\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>

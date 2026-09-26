@@ -1,3 +1,5 @@
+using FitnessPlanner.DAL.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace FitnessPlanner.API
 {
@@ -8,6 +10,10 @@ namespace FitnessPlanner.API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            builder.Services.AddDbContext<FitnessPlannerDbContext>(options =>
+                options.UseSqlServer(
+                    builder.Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddControllers();
             builder.Services.AddOpenApi();
