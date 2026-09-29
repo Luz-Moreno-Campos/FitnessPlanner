@@ -17,10 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\FitnessPlanner.BLL\FitnessPlanner.BLL.csproj" />
     <ProjectReference Include="..\FitnessPlannerDAL\FitnessPlanner.DAL.csproj" />
     <ProjectReference Include="..\Models\FitnessPlanner.Models.csproj" />
