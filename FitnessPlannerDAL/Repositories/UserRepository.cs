@@ -13,9 +13,12 @@ namespace FitnessPlanner.DAL.Repositories
             _context = context;
         }
 
-        public async Task<List<User>> GetAllAsync()
+        public async Task<List<User>> GetAllAsync(int pageNumber, int pageSize)
         {
-            return await _context.Users.ToListAsync();
+            return await _context.Users
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
         }
 
         public async Task<User?> GetByIdAsync(int id)

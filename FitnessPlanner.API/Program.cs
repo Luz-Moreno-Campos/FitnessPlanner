@@ -1,3 +1,4 @@
+using FitnessPlanner.API.ExceptionHandlers;
 using FitnessPlanner.DAL.Context;
 using FitnessPlanner.DAL.Seed;
 using Microsoft.EntityFrameworkCore;
@@ -17,19 +18,25 @@ namespace FitnessPlanner.API
                     builder.Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddControllers();
+            builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+
             builder.Services.AddOpenApi();
+
 
             var app = builder.Build();
 
-            using (var scope = app.Services.CreateScope())
-{
-            var context = scope.ServiceProvider
-                .GetRequiredService<FitnessPlannerDbContext>();
+            app.UseExceptionHandler();
 
-            SeedData.InitializeAsync(context)
-                .GetAwaiter()
-                .GetResult();
-        }
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var context = scope.ServiceProvider
+                    .GetRequiredService<FitnessPlannerDbContext>();
+
+                SeedData.InitializeAsync(context)
+                    .GetAwaiter()
+                    .GetResult();
+            }
 
             // Configure HTTP request pipeline for Development environments
             if (app.Environment.IsDevelopment())
