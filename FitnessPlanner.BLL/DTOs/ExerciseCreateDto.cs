@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace FitnessPlanner.DTOs.Exercises
+namespace FitnessPlanner.BLL.DTOs.Exercises
 {
-    public class UpdateExerciseDto
+    public class ExerciseCreateDto
     {
         [Required]
         [StringLength(100, MinimumLength = 2)]

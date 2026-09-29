@@ -1,4 +1,8 @@
-﻿public class WorkoutPlanReadDto
+﻿
+
+namespace FitnessPlanner.BLL.DTOs.WorkoutPlans;
+
+public class WorkoutPlanReadDto
 {
     public int WorkoutPlanId { get; set; }
 

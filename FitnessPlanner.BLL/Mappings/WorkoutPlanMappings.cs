@@ -1,4 +1,4 @@
-﻿using FitnessPlanner.DTOs.WorkoutPlans;
+﻿using FitnessPlanner.BLL.DTOs.WorkoutPlans;
 using FitnessPlanner.Models;
 
 namespace FitnessPlanner.API.Mappings

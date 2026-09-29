@@ -18,6 +18,7 @@ namespace FitnessPlanner.API
                     builder.Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddControllers();
+            builder.Services.AddProblemDetails();
             builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 
             builder.Services.AddOpenApi();

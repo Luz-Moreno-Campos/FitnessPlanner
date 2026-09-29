@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace FitnessPlanner.DTOs.WorkoutPlans
+namespace FitnessPlanner.BLL.DTOs.WorkoutPlans
 {
     public class WorkoutPlanUpdateDto
     {

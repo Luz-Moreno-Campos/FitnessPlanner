@@ -1,4 +1,4 @@
-﻿namespace FitnessPlanner.DTOs.Users
+﻿namespace FitnessPlanner.BLL.DTOs.Users
 {
     public class UserReadDto
     {

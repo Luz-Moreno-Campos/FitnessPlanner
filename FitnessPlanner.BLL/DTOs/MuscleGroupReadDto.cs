@@ -1,5 +1,5 @@
 ﻿
-namespace FitnessPlanner.DTOs.MuscleGroups
+namespace FitnessPlanner.BLL.DTOs.MuscleGroups
 {
     public class MuscleGroupReadDto
     {

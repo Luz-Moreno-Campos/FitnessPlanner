@@ -1,4 +1,4 @@
-﻿using FitnessPlanner.DTOs.MuscleGroups;
+﻿using FitnessPlanner.BLL.DTOs.MuscleGroups;
 using FitnessPlanner.Models;
 
 namespace FitnessPlanner.API.Mappings

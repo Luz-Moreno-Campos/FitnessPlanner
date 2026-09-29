@@ -1,4 +1,4 @@
-﻿namespace FitnessPlanner.DTOs.Exercises
+﻿namespace FitnessPlanner.BLL.DTOs.Exercises
 {
     public class ExerciseReadDto
     {
