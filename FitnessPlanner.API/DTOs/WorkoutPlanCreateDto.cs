@@ -1,0 +1,21 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace FitnessPlanner.DTOs.WorkoutPlans
+{
+    public class WorkoutPlanCreateDto
+    {
+        [Required]
+        [StringLength(100, MinimumLength = 2)]
+        public string Title { get; set; } = string.Empty;
+
+        [Required]
+        [StringLength(20)]
+        public string Difficulty { get; set; } = string.Empty;
+
+        [Range(1, 1000)]
+        public int DurationMinutes { get; set; }
+
+        [Range(1, int.MaxValue)]
+        public int UserId { get; set; }
+    }
+}
