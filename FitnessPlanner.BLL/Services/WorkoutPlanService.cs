@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FitnessPlanner.BLL
+namespace FitnessPlanner.BLL.Services
 {
-    internal class ExerciseService
+    internal class WorkoutPlanService
     {
     }
 }

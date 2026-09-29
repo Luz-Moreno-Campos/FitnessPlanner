@@ -2,7 +2,7 @@
 using FitnessPlanner.BLL.DTOs.Users;
 using FitnessPlanner.BLL.Mappings;
 
-namespace FitnessPlanner.API.Services
+namespace FitnessPlanner.BLL.Services
 {
     public class UserService
     {
@@ -25,16 +25,14 @@ namespace FitnessPlanner.API.Services
                 pageSize = 10;
             }
 
-            var users = await _userRepository
-                .GetAllAsync(pageNumber, pageSize);
+            var users = await _userRepository.GetAllAsync(pageNumber, pageSize);
 
             return users.ToDtoList();
         }
 
         public async Task<UserReadDto> CreateAsync(UserCreateDto dto)
         {
-            var existingUser = await _userRepository
-                .GetByEmailAsync(dto.Email);
+            var existingUser = await _userRepository.GetByEmailAsync(dto.Email);
 
             if (existingUser != null)
             {
@@ -50,8 +48,7 @@ namespace FitnessPlanner.API.Services
 
         public async Task DeleteAsync(int id)
         {
-            var user = await _userRepository
-                .GetByIdAsync(id);
+            var user = await _userRepository.GetByIdAsync(id);
 
             if (user == null)
             {
