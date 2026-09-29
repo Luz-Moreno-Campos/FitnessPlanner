@@ -1,5 +1,7 @@
 using FitnessPlanner.API.ExceptionHandlers;
+using FitnessPlanner.BLL.Services;
 using FitnessPlanner.DAL.Context;
+using FitnessPlanner.DAL.Repositories;
 using FitnessPlanner.DAL.Seed;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +23,29 @@ namespace FitnessPlanner.API
             builder.Services.AddProblemDetails();
             builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 
+            builder.Services.AddDbContext<FitnessPlannerDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddControllers();
+
+            builder.Services.AddProblemDetails();
+
+            builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+
+          
+            builder.Services.AddScoped<UserRepository>();
+            builder.Services.AddScoped<ExerciseRepository>();
+            builder.Services.AddScoped<WorkoutPlanRepository>();
+            builder.Services.AddScoped<MuscleGroupRepository>();
+
+     
+            builder.Services.AddScoped<UserService>();
+            builder.Services.AddScoped<ExerciseService>();
+            builder.Services.AddScoped<WorkoutPlanService>();
+            builder.Services.AddScoped<MuscleGroupService>();
+
+        
             builder.Services.AddOpenApi();
 
 
