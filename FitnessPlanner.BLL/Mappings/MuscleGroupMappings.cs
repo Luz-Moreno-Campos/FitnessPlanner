@@ -1,7 +1,7 @@
 ﻿using FitnessPlanner.BLL.DTOs.MuscleGroups;
 using FitnessPlanner.Models;
 
-namespace FitnessPlanner.API.Mappings
+namespace FitnessPlanner.BLL.Mappings
 {
     public static class MuscleGroupMappings
     {

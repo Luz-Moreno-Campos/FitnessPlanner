@@ -1,7 +1,7 @@
 ﻿using FitnessPlanner.BLL.DTOs.Exercises;
 using FitnessPlanner.Models;
 
-namespace FitnessPlanner.API.Mappings
+namespace FitnessPlanner.BLL.Mappings
 {
     public static class ExerciseMappings
     {

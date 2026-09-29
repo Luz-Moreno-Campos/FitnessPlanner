@@ -1,6 +1,6 @@
-﻿using FitnessPlanner.API.Mappings;
-using FitnessPlanner.DAL.Repositories;
+﻿using FitnessPlanner.DAL.Repositories;
 using FitnessPlanner.BLL.DTOs.Users;
+using FitnessPlanner.BLL.Mappings;
 
 namespace FitnessPlanner.API.Services
 {

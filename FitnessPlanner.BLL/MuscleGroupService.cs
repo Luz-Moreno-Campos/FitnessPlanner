@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FitnessPlanner.DAL.Repositories;
+using FitnessPlanner.BLL.DTOs.MuscleGroups;
+using FitnessPlanner.BLL.Mappings;
 
-namespace FitnessPlanner.BLL
+
+namespace FitnessPlanner.BLL.Services
 {
-    internal class MuscleGroupService
+    public class MuscleGroupService
     {
+        private readonly MuscleGroupRepository _muscleGroupRepository;
+
+        public MuscleGroupService(MuscleGroupRepository muscleGroupRepository)
+        {
+            _muscleGroupRepository = muscleGroupRepository;
+        }
+
+        public async Task<List<MuscleGroupReadDto>> GetAllAsync()
+        {
+            var muscleGroups =await _muscleGroupRepository.GetAllAsync();
+
+            return muscleGroups.ToDtoList();
+        }
     }
 }
