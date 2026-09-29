@@ -60,7 +60,7 @@ namespace FitnessPlanner.BLL.Services
             return exercise.ToDto();
         }
 
-        public async Task UpdateAsync(int id,UpdateExerciseDto dto)
+        public async Task<ExerciseReadDto> UpdateAsync(int id,UpdateExerciseDto dto)
         {
             var exercise = await _exerciseRepository.GetByIdAsync(id);
 
@@ -72,6 +72,8 @@ namespace FitnessPlanner.BLL.Services
             exercise.UpdateFromDto(dto);
 
             await _exerciseRepository.UpdateAsync();
+
+            return exercise.ToDto();
         }
 
         public async Task DeleteAsync(int id)
